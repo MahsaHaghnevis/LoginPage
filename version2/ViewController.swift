@@ -10,15 +10,18 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var scrollView: UIScrollView!
-    
     @IBOutlet weak var contentView: UIView!
+    
+    
+    
+    @IBOutlet weak var Logo: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         configScroll()
         configContentView()
-        
+        configLogo()
     }
 
     
@@ -55,6 +58,22 @@ class ViewController: UIViewController {
         
         
     }
+    
+    func configLogo(){
+           
+           Logo.translatesAutoresizingMaskIntoConstraints = false
+           Logo.font = UIFont(name: "Poppins-ExtraBold", size: 17)
+        
+        NSLayoutConstraint.activate([
+        
+            Logo.topAnchor.constraint(equalTo: view.topAnchor, constant: 18) ,
+            Logo.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 26) 
+            
+        ])
+        
+        Logo.text = "Your Logo"
+        
+       }
 
 }
 

@@ -29,11 +29,19 @@
                                 <viewLayoutGuide key="contentLayoutGuide" id="Dam-qL-MRB"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="Kkb-KS-8tZ"/>
                             </scrollView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ml9-E1-FZ9">
+                                <rect key="frame" x="45" y="54" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.92549019610000005" green="0.73725490199999999" blue="0.46274509800000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
                     <connections>
+                        <outlet property="Logo" destination="Ml9-E1-FZ9" id="221-2K-BES"/>
                         <outlet property="contentView" destination="6vV-N2-bTL" id="kNP-eR-Dyq"/>
                         <outlet property="scrollView" destination="kVD-LK-dak" id="5kF-jW-xjq"/>
                     </connections>
