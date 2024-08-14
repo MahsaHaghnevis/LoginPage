@@ -41,8 +41,11 @@ class ViewController: UIViewController , UITextFieldDelegate{
     
     @IBOutlet weak var signInButton: UIButton!
     
+    var allUsername : [String]?
     
     override func viewDidLoad() {
+        
+        
         
         passwordTextField.delegate = self
         usernameTextField.delegate = self
@@ -529,6 +532,31 @@ class ViewController: UIViewController , UITextFieldDelegate{
              resetForm()
          }
     
+    
+    func resetForm(){
+           
+           
+           usernameTextField.text = ""
+           passwordTextField.text = ""
+           userAlertUniq.textColor = .black
+           numbersError.textColor = .black
+           upperCaseError.textColor = .black
+           spceialEror.textColor = .black
+           
+           
+           
+       }
+    
+    
+    func validatePassword() -> Bool {
+               if let password = passwordTextField.text {
+                   let passwordValidator = CheckPass(pass: password)
+                   if passwordValidator.checkNumberOfChars() && passwordValidator.checkUpperCase() {
+                       return true
+                   }
+               }
+               return false
+           }
     
     
 }

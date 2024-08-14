@@ -34,4 +34,19 @@ class CheckPass{
         return false
         
     }
+    
+    
+    func checkSpecialCharacter() -> Bool {
+        for char in pass {
+            if let asciiVal = char.asciiValue {
+                if (asciiVal>34 && asciiVal<39)
+                {
+                    return true
+                    
+                }
+            }
+        }
+        return false
+        
+    }
 }

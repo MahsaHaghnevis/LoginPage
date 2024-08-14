@@ -119,6 +119,9 @@
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                                <connections>
+                                                    <action selector="signinButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LDS-Hi-Sed"/>
+                                                </connections>
                                             </button>
                                             <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="y5b-wH-qBe">
                                                 <rect key="frame" x="32" y="579" width="41.333333333333343" height="61"/>
