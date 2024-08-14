@@ -13,6 +13,7 @@
 		194F97532C6C9E610041EB13 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 194F97522C6C9E610041EB13 /* Base */; };
 		194F97552C6C9E620041EB13 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 194F97542C6C9E620041EB13 /* Assets.xcassets */; };
 		194F97582C6C9E620041EB13 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 194F97572C6C9E620041EB13 /* Base */; };
+		19E4B84B2C6CA45E00D25ED3 /* PassChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E4B84A2C6CA45E00D25ED3 /* PassChecker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		194F97542C6C9E620041EB13 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		194F97572C6C9E620041EB13 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		194F97592C6C9E620041EB13 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		19E4B84A2C6CA45E00D25ED3 /* PassChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassChecker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				194F974B2C6C9E610041EB13 /* AppDelegate.swift */,
 				194F974D2C6C9E610041EB13 /* SceneDelegate.swift */,
 				194F974F2C6C9E610041EB13 /* ViewController.swift */,
+				19E4B84A2C6CA45E00D25ED3 /* PassChecker.swift */,
 				194F97512C6C9E610041EB13 /* Main.storyboard */,
 				194F97542C6C9E620041EB13 /* Assets.xcassets */,
 				194F97562C6C9E620041EB13 /* LaunchScreen.storyboard */,
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19E4B84B2C6CA45E00D25ED3 /* PassChecker.swift in Sources */,
 				194F97502C6C9E610041EB13 /* ViewController.swift in Sources */,
 				194F974C2C6C9E610041EB13 /* AppDelegate.swift in Sources */,
 				194F974E2C6C9E610041EB13 /* SceneDelegate.swift in Sources */,
