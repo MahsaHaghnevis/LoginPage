@@ -60,17 +60,33 @@
 		194F974A2C6C9E610041EB13 /* version2 */ = {
 			isa = PBXGroup;
 			children = (
-				194F974B2C6C9E610041EB13 /* AppDelegate.swift */,
-				194F974D2C6C9E610041EB13 /* SceneDelegate.swift */,
-				19E4B84A2C6CA45E00D25ED3 /* PassChecker.swift */,
+				19E4B84E2C6CA4D400D25ED3 /* support */,
+				19E4B84F2C6CA4E200D25ED3 /* DefinedClasses */,
 				194F974F2C6C9E610041EB13 /* ViewController.swift */,
 				194F97512C6C9E610041EB13 /* Main.storyboard */,
-				19E4B84C2C6CA4AF00D25ED3 /* Alert.swift */,
 				194F97542C6C9E620041EB13 /* Assets.xcassets */,
 				194F97562C6C9E620041EB13 /* LaunchScreen.storyboard */,
 				194F97592C6C9E620041EB13 /* Info.plist */,
 			);
 			path = version2;
+			sourceTree = "<group>";
+		};
+		19E4B84E2C6CA4D400D25ED3 /* support */ = {
+			isa = PBXGroup;
+			children = (
+				194F974D2C6C9E610041EB13 /* SceneDelegate.swift */,
+				194F974B2C6C9E610041EB13 /* AppDelegate.swift */,
+			);
+			path = support;
+			sourceTree = "<group>";
+		};
+		19E4B84F2C6CA4E200D25ED3 /* DefinedClasses */ = {
+			isa = PBXGroup;
+			children = (
+				19E4B84A2C6CA45E00D25ED3 /* PassChecker.swift */,
+				19E4B84C2C6CA4AF00D25ED3 /* Alert.swift */,
+			);
+			path = DefinedClasses;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
