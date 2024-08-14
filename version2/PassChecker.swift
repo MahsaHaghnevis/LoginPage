@@ -11,7 +11,7 @@ import Foundation
 class CheckPass{
     
     var pass : String
-        
+    
     init(pass : String){
         self.pass = pass
     }
@@ -25,13 +25,13 @@ class CheckPass{
     }
     
     func checkUpperCase() -> Bool{
-       outerLoop: for char in pass {
-            if char.isUppercase {
-                return true
-               
-            }
+    outerLoop: for char in pass {
+        if char.isUppercase {
+            return true
+            
         }
+    }
         return false
         
     }
-  
+}
