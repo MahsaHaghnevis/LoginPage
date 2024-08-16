@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		193E1AE22C6CC13C00540EA1 /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 19E4B8572C6CA6FB00D25ED3 /* Poppins-SemiBold.ttf */; };
+		193E1AE32C6CC14000540EA1 /* Poppins-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 19E4B8522C6CA6D900D25ED3 /* Poppins-Black.ttf */; };
+		193E1AE42C6CC14200540EA1 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 19E4B8532C6CA6DF00D25ED3 /* Poppins-Bold.ttf */; };
+		193E1AE52C6CC14400540EA1 /* Poppins-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 19E4B8542C6CA6EA00D25ED3 /* Poppins-Light.ttf */; };
+		193E1AE62C6CC14600540EA1 /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 19E4B8552C6CA6F000D25ED3 /* Poppins-Medium.ttf */; };
+		193E1AE72C6CC14800540EA1 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 19E4B8562C6CA6F700D25ED3 /* Poppins-Regular.ttf */; };
+		193E1AE82C6CC14B00540EA1 /* Poppins-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 19E4B8582C6CA70000D25ED3 /* Poppins-Thin.ttf */; };
 		194F974C2C6C9E610041EB13 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194F974B2C6C9E610041EB13 /* AppDelegate.swift */; };
 		194F974E2C6C9E610041EB13 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194F974D2C6C9E610041EB13 /* SceneDelegate.swift */; };
 		194F97502C6C9E610041EB13 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194F974F2C6C9E610041EB13 /* ViewController.swift */; };
@@ -15,6 +22,7 @@
 		194F97582C6C9E620041EB13 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 194F97572C6C9E620041EB13 /* Base */; };
 		19E4B84B2C6CA45E00D25ED3 /* PassChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E4B84A2C6CA45E00D25ED3 /* PassChecker.swift */; };
 		19E4B84D2C6CA4AF00D25ED3 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E4B84C2C6CA4AF00D25ED3 /* Alert.swift */; };
+		19F0A9AF2C6F60C0005416A3 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 19F0A9AE2C6F60C0005416A3 /* IQKeyboardManagerSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19F0A9AF2C6F60C0005416A3 /* IQKeyboardManagerSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -127,6 +136,9 @@
 			dependencies = (
 			);
 			name = version2;
+			packageProductDependencies = (
+				19F0A9AE2C6F60C0005416A3 /* IQKeyboardManagerSwift */,
+			);
 			productName = version2;
 			productReference = 194F97482C6C9E610041EB13 /* version2.app */;
 			productType = "com.apple.product-type.application";
@@ -155,6 +167,9 @@
 				Base,
 			);
 			mainGroup = 194F973F2C6C9E600041EB13;
+			packageReferences = (
+				19F0A9AD2C6F60C0005416A3 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
+			);
 			productRefGroup = 194F97492C6C9E610041EB13 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -169,9 +184,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				193E1AE52C6CC14400540EA1 /* Poppins-Light.ttf in Resources */,
 				194F97552C6C9E620041EB13 /* Assets.xcassets in Resources */,
+				193E1AE42C6CC14200540EA1 /* Poppins-Bold.ttf in Resources */,
+				193E1AE72C6CC14800540EA1 /* Poppins-Regular.ttf in Resources */,
+				193E1AE22C6CC13C00540EA1 /* Poppins-SemiBold.ttf in Resources */,
 				194F97582C6C9E620041EB13 /* Base in Resources */,
+				193E1AE62C6CC14600540EA1 /* Poppins-Medium.ttf in Resources */,
 				194F97532C6C9E610041EB13 /* Base in Resources */,
+				193E1AE32C6CC14000540EA1 /* Poppins-Black.ttf in Resources */,
+				193E1AE82C6CC14B00540EA1 /* Poppins-Thin.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -407,6 +429,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		19F0A9AD2C6F60C0005416A3 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.1.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		19F0A9AE2C6F60C0005416A3 /* IQKeyboardManagerSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 19F0A9AD2C6F60C0005416A3 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			productName = IQKeyboardManagerSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 194F97402C6C9E600041EB13 /* Project object */;
 }

@@ -62,7 +62,8 @@ class ViewController: UIViewController , UITextFieldDelegate{
         configdefaultAccounts()
         confFaceBook()
         confApple()
-        configUserText()
+        confUserText()
+        //configUserText()
         configUserText()
         configPassText()
         configurePassText()
@@ -70,6 +71,13 @@ class ViewController: UIViewController , UITextFieldDelegate{
         configSignIntButton()
         configErrorPlace()
         configUserAlertLabel()
+        //signinButtonTapped()
+        
+        
+                numbersError.font   = UIFont(name: "Poppins-Light", size: 9)
+                upperCaseError.font = UIFont(name: "Poppins-Light", size: 9)
+                spceialEror.font    = UIFont(name: "Poppins-Light", size: 9)
+                userAlertUniq.font = UIFont(name: "Poppins-Light", size: 9)
     }
 
     
@@ -97,7 +105,7 @@ class ViewController: UIViewController , UITextFieldDelegate{
                     contentView.topAnchor.constraint(equalTo: scrollView.topAnchor),
                     contentView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor),
                     contentView.widthAnchor.constraint(equalTo: scrollView.widthAnchor), // Content width equal to scroll view width
-                    contentView.heightAnchor.constraint(equalToConstant: 750) // Example content height
+                    contentView.heightAnchor.constraint(equalToConstant: 741) // Example content height
                 ])
         
         contentView.clipsToBounds = true
@@ -119,7 +127,7 @@ class ViewController: UIViewController , UITextFieldDelegate{
         ])
         
         Logo.text = "Your Logo"
-        Logo.font = UIFont(name: "Poppins-Bold", size: 18)
+        Logo.font = UIFont(name: "Poppins-SemiBold", size: 18)
         
        }
     
@@ -127,11 +135,12 @@ class ViewController: UIViewController , UITextFieldDelegate{
            
            noAccountLabel.translatesAutoresizingMaskIntoConstraints = false
            NSLayoutConstraint.activate([
-               noAccountLabel.leftAnchor.constraint(equalTo: contentView.leftAnchor , constant: 227) ,
-               noAccountLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 47)
+               //noAccountLabel.leftAnchor.constraint(equalTo: contentView.leftAnchor , constant: 227) ,
+               noAccountLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 47) ,
+               noAccountLabel.rightAnchor.constraint(equalTo: contentView.rightAnchor, constant: -27)
            ])
         noAccountLabel.text = "No account?"
-        noAccountLabel.font = UIFont(name: "Poppins-Light", size: 13)
+        noAccountLabel.font = UIFont(name: "Poppins-Regular", size: 13)
        }
     
     func cofigSignupButton(){
@@ -143,11 +152,10 @@ class ViewController: UIViewController , UITextFieldDelegate{
             ])
         
         registerButton.setTitle("Sign Up", for: .normal)
-        registerButton.titleLabel?.font =  UIFont(name: "Poppins-Light", size: 13)
-        registerButton.titleLabel?.textColor = UIColor(cgColor: CGColor(red: 0.8431372549019608, green: 0.5450980392156862, blue: 0.19215686274509805, alpha: 1))
+        registerButton.titleLabel?.font =  UIFont(name: "Poppins-Regular", size: 13)
+        registerButton.setTitleColor(UIColor(cgColor: CGColor(red: 0.8431372549019608, green: 0.5450980392156862, blue: 0.19215686274509805, alpha: 1)), for: .normal)
         
         }
-    
     
     func configHeader(){
             let fullText = "Welcome to LOREM"
@@ -159,9 +167,19 @@ class ViewController: UIViewController , UITextFieldDelegate{
             
             attributedString.addAttribute(.foregroundColor, value: firstPartColor, range: NSRange(location: 0, length: 10)) // "Welcome to"
             attributedString.addAttribute(.foregroundColor, value: secondPartColor, range: NSRange(location: 11, length: 5)) // "LOREM"
+        
+//        attributedString.addAttribute(.font, value: "Poppins-SemiBold" , range: NSRange(location: 11, length: 5))
 
             loremLabel.attributedText = attributedString
             
+        let firstFont = UIFont(name:"Poppins-Regular" , size: 17)
+        let secondPart = UIFont(name: "Poppins-SemiBold", size: 17)
+        
+        attributedString.addAttribute(.font, value: firstFont as Any, range: NSRange(location: 0, length: 10))
+        attributedString.addAttribute(.font, value: secondPart as Any, range: NSRange(location: 11, length: 5))
+        
+        loremLabel.attributedText =  attributedString
+        
             loremLabel.translatesAutoresizingMaskIntoConstraints = false
             NSLayoutConstraint.activate([
                 loremLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor , constant: 27) ,
@@ -169,17 +187,15 @@ class ViewController: UIViewController , UITextFieldDelegate{
                 loremLabel.topAnchor.constraint(equalTo: self.contentView.topAnchor, constant: 44)
             ])
             
-            loremLabel.font = UIFont(name: "Poppins-Medium", size: 17)
-            
+                        
         }
-    
 
     func configSignin(){
             signInLabel.translatesAutoresizingMaskIntoConstraints = false
-            signInLabel.font = UIFont(name: "Poppins-Regular", size: 50)
+            signInLabel.font = UIFont(name: "Poppins-Medium", size: 40)
             signInLabel.text = "Sign in"
             NSLayoutConstraint.activate([
-                signInLabel.topAnchor.constraint(equalTo: self.contentView.topAnchor ,constant:  92) ,
+                signInLabel.topAnchor.constraint(equalTo: loremLabel.bottomAnchor ,constant:  13) ,
                 signInLabel.leftAnchor.constraint(equalTo: self.contentView.leftAnchor, constant: 32) ,
                 //signInLabel.bottomAnchor.constraint(equalTo: signinGoogleStack.topAnchor, constant: -20)
             ])
@@ -198,7 +214,7 @@ class ViewController: UIViewController , UITextFieldDelegate{
     func configdefaultAccounts(){
             signInWithGoogle.translatesAutoresizingMaskIntoConstraints = false
             signInWithGoogle.setTitle(" Sign in with Google ", for: .normal)
-            signInWithGoogle.titleLabel?.font = UIFont(name: "Poppins-Black", size: 17)
+            signInWithGoogle.titleLabel?.font = UIFont(name: "Poppins-Regular", size: 12)
             //signInWithGoogle.titleLabel?.textAlignment = .center
             
             signInWithGoogle.setTitleColor(UIColor(cgColor: CGColor(red: 228, green: 0.5294117647058824, blue:0, alpha: 1)), for: .normal)
@@ -266,11 +282,11 @@ class ViewController: UIViewController , UITextFieldDelegate{
     
     func confUserText(){
         
-        enterUser.text = "Enter your username or email address"
+        //enterUser.text = "Enter your username or email address"
             enterUser.translatesAutoresizingMaskIntoConstraints = false
             NSLayoutConstraint.activate([
                 enterUser.leftAnchor.constraint(equalTo: contentView.leftAnchor , constant: 32) ,
-                enterUser.topAnchor.constraint(equalTo : signInWithGoogle.bottomAnchor , constant: 30) ,
+                enterUser.topAnchor.constraint(equalTo : signInWithGoogle.bottomAnchor , constant: 50) ,
                 enterUser.rightAnchor.constraint(equalTo: usernameTextField.rightAnchor )
             ])
             
@@ -279,6 +295,8 @@ class ViewController: UIViewController , UITextFieldDelegate{
     
     
     func configUserText(){
+        
+        
        usernameTextField.translatesAutoresizingMaskIntoConstraints = false
        
        NSLayoutConstraint.activate([
@@ -303,8 +321,8 @@ class ViewController: UIViewController , UITextFieldDelegate{
        usernameTextField.layer.borderWidth = 1.0
        usernameTextField.clipsToBounds = true
        usernameTextField.layer.cornerRadius = 10
-       
-   }
+        
+    }
     
     func configPassText(){
         
@@ -349,28 +367,33 @@ class ViewController: UIViewController , UITextFieldDelegate{
     func textFieldDidBeginEditing(_ textField: UITextField) {
             textField.layer.borderColor = CGColor(red: 0.8941176470588236, green: 0.5294117647058824, blue: 0, alpha: 1)
             textField.layer.borderWidth = 1.6
+            userAlertStack.isHidden = false
+            errorStack.isHidden = false
         }
         
     func textFieldDidEndEditing(_ textField: UITextField) {
             textField.layer.borderColor = UIColor.gray.cgColor
             textField.layer.borderWidth = 1.0
+            //userAlertStack.isHidden = true
         }
         
     func configForgot(){
         forgotPassButton.setTitle("Forgot Password", for: .normal)
            forgotPassButton.translatesAutoresizingMaskIntoConstraints = false
-           forgotPassButton.titleLabel?.font = UIFont (name: "Poppins-Light", size: 10)
+           
+        
+        forgotPassButton.setTitleColor(UIColor(cgColor: CGColor(red: 228, green: 0.5294117647058824, blue:0, alpha: 1)), for: .normal)
            NSLayoutConstraint.activate([
-               forgotPassButton.topAnchor.constraint(equalTo: passwordTextField.bottomAnchor, constant: 12),
+               forgotPassButton.topAnchor.constraint(equalTo: passwordTextField.bottomAnchor, constant: 3),
                forgotPassButton.rightAnchor.constraint(equalTo: self.passwordTextField.rightAnchor) ,
            ])
            // forgotPassButton.configuration
         
         forgotPassButton.setTitle("Good To Know", for: .highlighted)
+        
+        forgotPassButton.titleLabel?.font = UIFont(name: "Poppins-Regular", size: 10)
        }
-    
-    
-    
+
     func configSignIntButton(){
         
         signInButton.translatesAutoresizingMaskIntoConstraints = false
@@ -408,11 +431,11 @@ class ViewController: UIViewController , UITextFieldDelegate{
            return true
        }
     
-    
     @IBOutlet weak var errorStack: UIStackView!
     
-   
     func configErrorPlace(){
+        
+        errorStack.isHidden = true
         
         errorStack.layoutMargins = UIEdgeInsets(top: 5 , left: 5 , bottom: 5, right: 5)
         errorStack.isLayoutMarginsRelativeArrangement = true
@@ -426,7 +449,8 @@ class ViewController: UIViewController , UITextFieldDelegate{
         errorStack.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             errorStack.leftAnchor.constraint(equalTo: passwordTextField.leftAnchor) ,
-            errorStack.topAnchor.constraint(equalTo: passwordTextField.bottomAnchor, constant: 12)
+            errorStack.topAnchor.constraint(equalTo: passwordTextField.bottomAnchor, constant: 42) ,
+            //errorStack.rightAnchor.constraint(equalTo: contentView.rightAnchor ,  constant: -132)
             
         ])
         errorStack.axis = .vertical
@@ -439,7 +463,8 @@ class ViewController: UIViewController , UITextFieldDelegate{
     @IBOutlet weak var userAlertUniq: UILabel!
     
     func configUserAlertLabel(){
-            
+        userAlertStack.isHidden = true
+        
             userAlertStack.layoutMargins = UIEdgeInsets(top: 5 , left: 5 , bottom: 5, right: 5)
             userAlertStack.isLayoutMarginsRelativeArrangement = true
             
@@ -466,12 +491,12 @@ class ViewController: UIViewController , UITextFieldDelegate{
             
         }
     
-    
        @IBOutlet weak var numbersError: UILabel!
        @IBOutlet weak var spceialEror: UILabel!
        @IBOutlet weak var upperCaseError: UILabel!
     
     @IBAction func passEditTextField(_ sender: Any) {
+        
         
         if let passSent = passwordTextField.text {
             
@@ -494,8 +519,6 @@ class ViewController: UIViewController , UITextFieldDelegate{
             spceialEror.textColor = hasSpecialCharacter ? UIColor(cgColor: CGColor(red: 0, green: 0.5019607843137255, blue: 0, alpha: 1)) : UIColor(cgColor: CGColor(red: 0.5019607843137255, green: 0, blue: 0, alpha: 1))
         }
     }
-    
-    
     
     @IBAction func signinButtonTapped(_ sender: Any) {
         // Check if username is valid
@@ -532,7 +555,6 @@ class ViewController: UIViewController , UITextFieldDelegate{
              resetForm()
          }
     
-    
     func resetForm(){
            
            
@@ -542,11 +564,13 @@ class ViewController: UIViewController , UITextFieldDelegate{
            numbersError.textColor = .black
            upperCaseError.textColor = .black
            spceialEror.textColor = .black
-           
-           
+//        
+//        errorStack.isHidden = true
+//        userAlertStack.isHidden = true
+//           
+//           
            
        }
-    
     
     func validatePassword() -> Bool {
                if let password = passwordTextField.text {
@@ -557,6 +581,7 @@ class ViewController: UIViewController , UITextFieldDelegate{
                }
                return false
            }
+    
     
     
 }
