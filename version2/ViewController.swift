@@ -384,7 +384,7 @@ class ViewController: UIViewController , UITextFieldDelegate{
         someConstraint.constant = 126
 
                 // Animate the change if needed
-                UIView.animate(withDuration: 0.3) {
+                UIView.animate(withDuration: 0.2) {
                     self.view.layoutIfNeeded()
                 }
         }
