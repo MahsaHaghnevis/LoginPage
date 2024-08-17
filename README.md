@@ -12,7 +12,7 @@ This project features a login page designed using the **LOGIFY Web Login UI Kit*
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/yourusername/login-page.git
+    git clone https://github.com/yourusername/login-page.git](https://github.com/MahsaHaghnevis/LoginPage.git
     ```
 2. Open the project in Xcode.
 3. Build and run on your iOS simulator or device.
