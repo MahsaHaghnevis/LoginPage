@@ -45,6 +45,9 @@ class ViewController: UIViewController , UITextFieldDelegate{
     
     override func viewDidLoad() {
         
+        someConstraint = signInButton.topAnchor.constraint(equalTo: passwordTextField.bottomAnchor, constant: 76)
+        
+               someConstraint.isActive = true
         
         
         passwordTextField.delegate = self
@@ -71,8 +74,6 @@ class ViewController: UIViewController , UITextFieldDelegate{
         configSignIntButton()
         configErrorPlace()
     
-        
-        
                 numbersError.font   = UIFont(name: "Poppins-Light", size: 9)
                 upperCaseError.font = UIFont(name: "Poppins-Light", size: 9)
                 spceialEror.font    = UIFont(name: "Poppins-Light", size: 9)
@@ -370,12 +371,22 @@ class ViewController: UIViewController , UITextFieldDelegate{
             
         }
     
+   
+    var someConstraint: NSLayoutConstraint!
+    
     func textFieldDidBeginEditing(_ textField: UITextField) {
             textField.layer.borderColor = CGColor(red: 0.8941176470588236, green: 0.5294117647058824, blue: 0, alpha: 1)
             textField.layer.borderWidth = 1.6
            
             errorStack.isHidden = false
         
+        
+        someConstraint.constant = 126
+
+                // Animate the change if needed
+                UIView.animate(withDuration: 0.3) {
+                    self.view.layoutIfNeeded()
+                }
         }
         
     func textFieldDidEndEditing(_ textField: UITextField) {
@@ -412,7 +423,7 @@ class ViewController: UIViewController , UITextFieldDelegate{
         NSLayoutConstraint.activate([
             signInButton.widthAnchor.constraint(equalTo : passwordTextField.widthAnchor) ,
             signInButton.heightAnchor.constraint(equalToConstant: 54) ,
-            signInButton.topAnchor.constraint(equalTo: passwordTextField.bottomAnchor , constant: 76) ,
+            /*signInButton.topAnchor.constraint(equalTo: passwordTextField.bottomAnchor , constant: 76) */
             signInButton.centerXAnchor.constraint(equalTo: contentView.centerXAnchor)
         ])
         signInButton.clipsToBounds = false
@@ -465,41 +476,9 @@ class ViewController: UIViewController , UITextFieldDelegate{
         errorStack.spacing = 5
     }
     
-   
-    
-    
-//    func configUserAlertLabel(){
-//        userAlertStack.isHidden = true
-//        
-//            userAlertStack.layoutMargins = UIEdgeInsets(top: 5 , left: 5 , bottom: 5, right: 5)
-//            userAlertStack.isLayoutMarginsRelativeArrangement = true
-//            
-//            userAlertStack.clipsToBounds = true
-//            
-//            userAlertStack.backgroundColor = UIColor(cgColor: CGColor(red: 1, green: 0.9568627450980393, blue: 0.8901960784313725, alpha: 1))
-//            
-//            userAlertStack.layer.cornerRadius = 6
-//            
-//            userAlertStack.translatesAutoresizingMaskIntoConstraints = false
-//            
-//            NSLayoutConstraint.activate([
-//                userAlertStack.leftAnchor.constraint(equalTo: usernameTextField.leftAnchor) ,
-//                userAlertStack.topAnchor.constraint(equalTo: usernameTextField.bottomAnchor, constant: 12)
-//                
-//            ])
-//            
-//            userAlertStack.axis = .vertical
-//            userAlertStack.alignment = .leading
-//            userAlertStack.distribution = .fillEqually
-//            userAlertStack.spacing = 5
-//            
-//            userAlertUniq.text = "The username must be unique"
-//            
-//        }
-//    
-       @IBOutlet weak var numbersError: UILabel!
-       @IBOutlet weak var spceialEror: UILabel!
-       @IBOutlet weak var upperCaseError: UILabel!
+    @IBOutlet weak var numbersError: UILabel!
+    @IBOutlet weak var spceialEror: UILabel!
+    @IBOutlet weak var upperCaseError: UILabel!
     
     @IBAction func passEditTextField(_ sender: Any) {
         
