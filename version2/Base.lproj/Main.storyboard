@@ -151,17 +151,6 @@
                                                     </label>
                                                 </subviews>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="EP0-NI-Hrz">
-                                                <rect key="frame" x="24" y="362" width="188.66666666666666" height="20.333333333333314"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The user must be unique" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2ow-ha-UZh">
-                                                        <rect key="frame" x="0.0" y="0.0" width="188.66666666666666" height="20.333333333333332"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
-                                            </stackView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Enter your username or email address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KFF-WS-TSP">
                                                 <rect key="frame" x="32" y="333" width="288" height="21"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -215,8 +204,6 @@
                         <outlet property="signinGoogleStack" destination="gM9-PM-24R" id="Ley-Cp-SdP"/>
                         <outlet property="spceialEror" destination="dZ6-X7-ydl" id="GSd-fr-9Ga"/>
                         <outlet property="upperCaseError" destination="brE-AV-vgA" id="e9t-o9-Dtr"/>
-                        <outlet property="userAlertStack" destination="EP0-NI-Hrz" id="bLb-m0-XU0"/>
-                        <outlet property="userAlertUniq" destination="2ow-ha-UZh" id="tcI-l0-lPg"/>
                         <outlet property="usernameTextField" destination="cA3-ee-Kct" id="sTm-sI-WWv"/>
                     </connections>
                 </viewController>

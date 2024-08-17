@@ -63,21 +63,20 @@ class ViewController: UIViewController , UITextFieldDelegate{
         confFaceBook()
         confApple()
         confUserText()
-        //configUserText()
+
         configUserText()
         configPassText()
         configurePassText()
         configForgot()
         configSignIntButton()
         configErrorPlace()
-       // configUserAlertLabel()
-        //signinButtonTapped()
+    
         
         
                 numbersError.font   = UIFont(name: "Poppins-Light", size: 9)
                 upperCaseError.font = UIFont(name: "Poppins-Light", size: 9)
                 spceialEror.font    = UIFont(name: "Poppins-Light", size: 9)
-                userAlertUniq.font = UIFont(name: "Poppins-Light", size: 9)
+               
     }
 
     
@@ -374,7 +373,7 @@ class ViewController: UIViewController , UITextFieldDelegate{
     func textFieldDidBeginEditing(_ textField: UITextField) {
             textField.layer.borderColor = CGColor(red: 0.8941176470588236, green: 0.5294117647058824, blue: 0, alpha: 1)
             textField.layer.borderWidth = 1.6
-            userAlertStack.isHidden = false
+           
             errorStack.isHidden = false
         
         }
@@ -382,7 +381,7 @@ class ViewController: UIViewController , UITextFieldDelegate{
     func textFieldDidEndEditing(_ textField: UITextField) {
             textField.layer.borderColor = UIColor.gray.cgColor
             textField.layer.borderWidth = 1.0
-            //userAlertStack.isHidden = true
+            
         }
         
     func configForgot(){
@@ -466,38 +465,38 @@ class ViewController: UIViewController , UITextFieldDelegate{
         errorStack.spacing = 5
     }
     
-    @IBOutlet weak var userAlertStack: UIStackView!
-    @IBOutlet weak var userAlertUniq: UILabel!
+   
     
-    func configUserAlertLabel(){
-        userAlertStack.isHidden = true
-        
-            userAlertStack.layoutMargins = UIEdgeInsets(top: 5 , left: 5 , bottom: 5, right: 5)
-            userAlertStack.isLayoutMarginsRelativeArrangement = true
-            
-            userAlertStack.clipsToBounds = true
-            
-            userAlertStack.backgroundColor = UIColor(cgColor: CGColor(red: 1, green: 0.9568627450980393, blue: 0.8901960784313725, alpha: 1))
-            
-            userAlertStack.layer.cornerRadius = 6
-            
-            userAlertStack.translatesAutoresizingMaskIntoConstraints = false
-            
-            NSLayoutConstraint.activate([
-                userAlertStack.leftAnchor.constraint(equalTo: usernameTextField.leftAnchor) ,
-                userAlertStack.topAnchor.constraint(equalTo: usernameTextField.bottomAnchor, constant: 12)
-                
-            ])
-            
-            userAlertStack.axis = .vertical
-            userAlertStack.alignment = .leading
-            userAlertStack.distribution = .fillEqually
-            userAlertStack.spacing = 5
-            
-            userAlertUniq.text = "The username must be unique"
-            
-        }
     
+//    func configUserAlertLabel(){
+//        userAlertStack.isHidden = true
+//        
+//            userAlertStack.layoutMargins = UIEdgeInsets(top: 5 , left: 5 , bottom: 5, right: 5)
+//            userAlertStack.isLayoutMarginsRelativeArrangement = true
+//            
+//            userAlertStack.clipsToBounds = true
+//            
+//            userAlertStack.backgroundColor = UIColor(cgColor: CGColor(red: 1, green: 0.9568627450980393, blue: 0.8901960784313725, alpha: 1))
+//            
+//            userAlertStack.layer.cornerRadius = 6
+//            
+//            userAlertStack.translatesAutoresizingMaskIntoConstraints = false
+//            
+//            NSLayoutConstraint.activate([
+//                userAlertStack.leftAnchor.constraint(equalTo: usernameTextField.leftAnchor) ,
+//                userAlertStack.topAnchor.constraint(equalTo: usernameTextField.bottomAnchor, constant: 12)
+//                
+//            ])
+//            
+//            userAlertStack.axis = .vertical
+//            userAlertStack.alignment = .leading
+//            userAlertStack.distribution = .fillEqually
+//            userAlertStack.spacing = 5
+//            
+//            userAlertUniq.text = "The username must be unique"
+//            
+//        }
+//    
        @IBOutlet weak var numbersError: UILabel!
        @IBOutlet weak var spceialEror: UILabel!
        @IBOutlet weak var upperCaseError: UILabel!
