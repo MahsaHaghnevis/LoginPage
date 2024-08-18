@@ -101,7 +101,7 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                                 <connections>
-                                                    <action selector="passEditTextField:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="RkM-F9-BeP"/>
+                                                    <action selector="passEditTextField:" destination="BYZ-38-t0r" eventType="editingChanged" id="3Ev-lc-R7d"/>
                                                 </connections>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W3L-wm-wmr">
