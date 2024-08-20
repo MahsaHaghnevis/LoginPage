@@ -10,6 +10,7 @@ import UIKit
 class ViewController: UIViewController , UITextFieldDelegate{
     
     
+    @IBOutlet var backgroundView: UIView!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var contentView: UIView!
     
@@ -46,9 +47,9 @@ class ViewController: UIViewController , UITextFieldDelegate{
     
     override func viewDidLoad() {
         
-        someConstraint = signInButton.topAnchor.constraint(equalTo: passwordTextField.bottomAnchor, constant: 76)
+        buttonDistanceConstraint = signInButton.topAnchor.constraint(equalTo: passwordTextField.bottomAnchor, constant: 76)
         
-               someConstraint.isActive = true
+               buttonDistanceConstraint.isActive = true
         
         
         passwordTextField.delegate = self
@@ -75,6 +76,7 @@ class ViewController: UIViewController , UITextFieldDelegate{
         configForgot()
         configSignIntButton()
         configErrorPlace()
+        configBG()
     
                 numbersError.font   = UIFont(name: "Poppins-Light", size: 9)
                 upperCaseError.font = UIFont(name: "Poppins-Light", size: 9)
@@ -82,7 +84,9 @@ class ViewController: UIViewController , UITextFieldDelegate{
                
     }
 
-    
+    func configBG(){
+        backgroundView.backgroundColor = UIColor(named: "Color BG")
+    }
     func configScroll(){
         
         scrollView.translatesAutoresizingMaskIntoConstraints = false
@@ -173,7 +177,7 @@ class ViewController: UIViewController , UITextFieldDelegate{
             let attributedString = NSMutableAttributedString(string: fullText)
             
             // Colors
-            let firstPartColor = UIColor.black
+            let firstPartColor = UIColor(named: "Color")
             let secondPartColor = UIColor(cgColor: CGColor(red: 0.8941176470588236, green: 0.5294117647058824, blue: 0, alpha: 1))
             
             attributedString.addAttribute(.foregroundColor, value: firstPartColor, range: NSRange(location: 0, length: 10)) // "Welcome to"
@@ -388,7 +392,7 @@ class ViewController: UIViewController , UITextFieldDelegate{
         }
     
    
-    var someConstraint: NSLayoutConstraint!
+    var buttonDistanceConstraint: NSLayoutConstraint!
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
             textField.layer.borderColor = CGColor(red: 0.8941176470588236, green: 0.5294117647058824, blue: 0, alpha: 1)
@@ -397,10 +401,10 @@ class ViewController: UIViewController , UITextFieldDelegate{
             errorStack.isHidden = false
         
         
-        someConstraint.constant = 126
+        buttonDistanceConstraint.constant = 126
 
                 // Animate the change if needed
-                UIView.animate(withDuration: 0.2) {
+                UIView.animate(withDuration: 0.4) {
                     self.view.layoutIfNeeded()
                 }
         }

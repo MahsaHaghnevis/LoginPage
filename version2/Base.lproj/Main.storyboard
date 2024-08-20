@@ -180,11 +180,11 @@
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" red="0.92549019610000005" green="0.73725490199999999" blue="0.46274509800000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
                     <connections>
                         <outlet property="AppleIDButton" destination="Nd8-VK-rDo" id="Yup-tD-ca5"/>
                         <outlet property="Logo" destination="Ml9-E1-FZ9" id="221-2K-BES"/>
+                        <outlet property="backgroundView" destination="8bC-Xf-vdC" id="875-6o-jBi"/>
                         <outlet property="contentView" destination="6vV-N2-bTL" id="kNP-eR-Dyq"/>
                         <outlet property="enterPass" destination="W3L-wm-wmr" id="cFa-XI-vVK"/>
                         <outlet property="enterUser" destination="KFF-WS-TSP" id="esX-m6-dr1"/>
